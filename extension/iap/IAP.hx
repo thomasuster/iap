@@ -489,17 +489,17 @@ typedef IAProduct = {
 	private static var funcTest:Dynamic;
 	
 	#elseif ios
-	
-	private static var purchases_initialize = Lib.load ("iap", "iap_initialize", 0);
-	private static var purchases_restore = Lib.load ("iap", "iap_restore", 0);
-	private static var purchases_buy = Lib.load ("iap", "iap_buy", 1);
-	private static var purchases_get_data = Lib.load ("iap", "iap_get_data", 1);
-	private static var purchases_finish_transaction = Lib.load ("iap", "iap_finish_transaction", 1);
-	private static var purchases_canbuy = Lib.load ("iap", "iap_canbuy", 0);
-	private static var purchases_get_manualtransactionmode = Lib.load ("iap", "iap_get_manualtransactionmode", 0);
-	private static var purchases_set_manualtransactionmode = Lib.load ("iap", "iap_set_manualtransactionmode", 1);
-	private static var purchases_release = Lib.load ("iap", "iap_release", 0);
-	private static var set_event_handle = Lib.load ("iap", "iap_set_event_handle", 1);
+
+	private static var purchases_initialize = cpp.Lib.load ("iap", "iap_initialize", 0);
+	private static var purchases_restore = cpp.Lib.load ("iap", "iap_restore", 0);
+	private static var purchases_buy = cpp.Lib.load ("iap", "iap_buy", 1);
+	private static var purchases_get_data = cpp.Lib.load ("iap", "iap_get_data", 1);
+	private static var purchases_finish_transaction = cpp.Lib.load ("iap", "iap_finish_transaction", 1);
+	private static var purchases_canbuy = cpp.Lib.load ("iap", "iap_canbuy", 0);
+	private static var purchases_get_manualtransactionmode = cpp.Lib.load ("iap", "iap_get_manualtransactionmode", 0);
+	private static var purchases_set_manualtransactionmode = cpp.Lib.load ("iap", "iap_set_manualtransactionmode", 1);
+	private static var purchases_release = cpp.Lib.load ("iap", "iap_release", 0);
+	private static var set_event_handle = cpp.Lib.load ("iap", "iap_set_event_handle", 1);
 	
 	#end
 	
