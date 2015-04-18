@@ -7,7 +7,7 @@ import flash.Lib;
 import haxe.Json;
 
 #if android
-import openfl.utils.JNI;
+import nme.utils.JNI;
 #end
 
 
@@ -111,7 +111,7 @@ typedef IAProduct = {
 		
 		if (funcInit == null) {
 			
-			funcInit = JNI.createStaticMethod ("org/haxe/extension/iap/InAppPurchase", "initialize", "(Ljava/lang/String;Lorg/haxe/lime/HaxeObject;)V");
+			funcInit = JNI.createStaticMethod ("org/haxe/extension/iap/InAppPurchase", "initialize", "(Ljava/lang/String;Lorg/haxe/nme/HaxeObject;)V");
 			
 		}
 		
