@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import org.haxe.extension.iap.util.*;
 import org.haxe.extension.Extension;
-import org.haxe.lime.HaxeObject;
+import org.haxe.nme.HaxeObject;
 
 import org.json.JSONException;
 import android.graphics.Bitmap;
