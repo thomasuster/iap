@@ -18,6 +18,11 @@ class ProductDetails
 		productID = Reflect.hasField(dynObj, "productId")? Reflect.field(dynObj, "productId") : Reflect.field(dynObj, "productID");
 		type = cast Reflect.field(dynObj, "type");
 		localizedTitle = cast Reflect.field(dynObj, "title");
+        var fields = Reflect.fields(dynObj);
+        for (i in 0...fields.length) {
+            var name = fields[i];
+            trace(name + ' ' + Reflect.field(dynObj, name));
+        }
 		#if ios
 			localizedPrice = cast Reflect.field(dynObj, "localizedPrice");
 			priceAmountMicros = cast Reflect.field(dynObj, "priceAmountMicros");
