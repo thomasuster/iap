@@ -3,6 +3,7 @@ ndll/*/*.a
 ndll/*/*.so
 ndll/*/*.ndll
 project/obj/*
+ndll/*/*.hash
 
 *.hxproj
 
