@@ -652,6 +652,10 @@ public class IabHelper {
                     logWarn("IabHelper has been disposed.");
                     return;
                 }
+                catch (IllegalStateException ex) {
+                    logWarn("IabHelper has been disposed.");
+                    return;
+                }
 
                 flagEndAsync();
 
