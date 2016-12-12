@@ -290,7 +290,12 @@ public class IabHelper {
         mSetupDone = false;
         if (mServiceConn != null) {
             logDebug("Unbinding from service.");
-            if (mContext != null) mContext.unbindService(mServiceConn);
+            try {
+                if (mContext != null) mContext.unbindService(mServiceConn);    
+            }
+            catch(Exception e) {
+                logDebug("Android error unbinding in IAPs IabHelper.java");
+            }
         }
         mDisposed = true;
         mContext = null;
