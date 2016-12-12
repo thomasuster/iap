@@ -255,6 +255,10 @@ public class IabHelper {
                     e.printStackTrace();
                     return;
                 }
+                catch(NullPointerException e) {
+                    logDebug("Billling service disconnected dudring setup");
+                    return;
+                }
 
                 if (listener != null) {
                     listener.onIabSetupFinished(new IabResult(BILLING_RESPONSE_RESULT_OK, "Setup successful."));
