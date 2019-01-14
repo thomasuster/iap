@@ -12,6 +12,10 @@ apply plugin: 'android-library'
 android {
     compileSdkVersion 24
     buildToolsVersion "25.0.0"
+    defaultConfig {
+        targetSdkVersion ::ANDROID_TARGET_SDK_VERSION::
+    }
+    
     useLibrary  'org.apache.http.legacy'
     
     sourceSets {
