@@ -87,7 +87,7 @@ public class InAppPurchase extends Extension {
 				try {
 					InAppPurchase.inAppPurchaseHelper.queryInventoryAsync(querySkuDetails, moreSkus, mGotInventoryListener);
 				} catch(Exception e) {
-					Log.d("IAP", e.getMessage());
+					Log.d("IAP", forceString(e.getMessage()));
 				}
 			}
 		});
@@ -98,6 +98,12 @@ public class InAppPurchase extends Extension {
 		return publicKey;
 		
 	}
+   
+   private static String forceString(String string) {
+      if(string == null)
+         return "";
+      return string;
+   }
 	
 	
 	public static void initialize (String publicKey, HaxeObject callback) {
